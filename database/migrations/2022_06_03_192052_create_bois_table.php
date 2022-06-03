@@ -15,6 +15,10 @@ class CreateBoisTable extends Migration
     {
         Schema::create('bois', function (Blueprint $table) {
             $table->id();
+            $table->string("numBrinco");
+            $table->decimal("custo",19,2);
+            $table->decimal("pesoInicial",19,2);
+            $table->integer("dono");
             $table->timestamps();
         });
     }
